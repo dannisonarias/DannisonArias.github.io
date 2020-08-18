@@ -11,6 +11,8 @@
 
     <link rel="shortcut icon" href="images/icon1.png">
 
+    <!-- javascript ping tool -->
+    <script src="https://cdn.jsdelivr.net/gh/alfg/ping.js@0.2.2/dist/ping.min.js" type="text/javascript"></script>
     <!--Bootstrap Css-->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <!--Fontawesome-->
@@ -627,6 +629,21 @@
     <script src="js/contact.js"></script>
     <!--CUSTOM JS-->
     <script src="js/custom.js"></script>
+    <!-- ping heroku apps -->
+    <script>
+        const projectLinks = ['https://cryptic-fjord-20559.herokuapp.com/', 'https://safe-savannah-45972.herokuapp.com/', 'https://salty-sea-13355.herokuapp.com/groups', 'https://dannylivechatapp.herokuapp.com/', 'https://lculatordannison.herokuapp.com/']
+        for (let i = 0; i < projectLinks.length; i += 1) {
+            const p = new Ping();
+            p.ping(projectLinks[i], function (err, data) {
+                // Also display error if err is returned.
+                if (err) {
+                    console.log("error loading resource")
+                    data = data + " " + err;
+                }
+                document.getElementById("ping-redux-react-app").innerHTML = data;
+            });
+        }
+    </script>
 </body>
 
 </html>
