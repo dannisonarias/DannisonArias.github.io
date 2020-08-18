@@ -291,6 +291,17 @@ button:focus {
 }
 
 /*===========================
+        4.ARTICLES
+=============================*/
+
+.soon {
+    cursor: not-allowed;
+    pointer-events: none;
+    color: #c0c0c0;
+    background-color: #ffffff;
+}
+
+/*===========================
         4.HOME
 =============================*/
 
