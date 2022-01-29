@@ -9,6 +9,7 @@ const pingLiveApps = () => {
   for (let i = 0; i < projectLinks.length; i += 1) {
     const p = new Ping();
     p.ping(projectLinks[i], function (err, data) {});
+    console.log("pinged");
   }
 };
 
